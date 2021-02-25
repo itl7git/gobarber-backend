@@ -5,8 +5,6 @@ import AppError from '@shared/errors/AppError';
 import IUsersRepository from '../repositories/IUsersRepository';
 import IUserTokensRepository from '../repositories/IUserTokensRepository';
 import IHashProvider from '../providers/HashProvider/models/IHashProvider';
-import { convertToObject } from 'typescript';
-
 
 //import User from '../infra/typeorm/entities/User';
 
@@ -24,7 +22,7 @@ class ResetPasswordService{
         @inject('UserTokensRepository')
         private userTokensRepository: IUserTokensRepository,
 
-        @inject('Hash Provider')
+        @inject('HashProvider')
         private hashProvider: IHashProvider,
     ) {}
 
