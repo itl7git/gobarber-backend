@@ -1,5 +1,5 @@
-import { PrimaryGeneratedColumnType } from "typeorm/driver/types/ColumnTypes";
+import ISendMailDTO from '../dtos/ISendMailDTO';
 
 export default interface IMailProvider {
-    sendMail(to: string, body:string): Promise<void>;
+    sendMail(data: ISendMailDTO): Promise<void>;
 }
